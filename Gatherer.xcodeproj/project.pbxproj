@@ -17,7 +17,7 @@
 		5596C1471B206C080032B08F /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5596C1391B206A8E0032B08F /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14C1B206E6C0032B08F /* ConsentDocument.swift */; };
 		5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14E1B2075410032B08F /* ConsentTask.swift */; };
-		55B014491B26D58B00CEBA93 /* surveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B014481B26D58B00CEBA93 /* surveyTask.swift */; };
+		55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0144A1B26D60300CEBA93 /* SurveyTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,7 @@
 		5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gatherer-Bridging-Header.h"; sourceTree = "<group>"; };
 		5596C14C1B206E6C0032B08F /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		5596C14E1B2075410032B08F /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
-		55B014481B26D58B00CEBA93 /* surveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surveyTask.swift; sourceTree = "<group>"; };
+		55B0144A1B26D60300CEBA93 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +124,11 @@
 		5596C10F1B206A4E0032B08F /* Gatherer */ = {
 			isa = PBXGroup;
 			children = (
+				55B0144A1B26D60300CEBA93 /* SurveyTask.swift */,
 				5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */,
 				5596C1121B206A4E0032B08F /* AppDelegate.swift */,
 				5596C1141B206A4E0032B08F /* ViewController.swift */,
 				5596C14C1B206E6C0032B08F /* ConsentDocument.swift */,
-				55B014481B26D58B00CEBA93 /* surveyTask.swift */,
 				5596C14E1B2075410032B08F /* ConsentTask.swift */,
 				5596C1161B206A4E0032B08F /* Main.storyboard */,
 				5596C1191B206A4E0032B08F /* Images.xcassets */,
@@ -299,7 +299,7 @@
 			files = (
 				5596C1151B206A4E0032B08F /* ViewController.swift in Sources */,
 				5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */,
-				55B014491B26D58B00CEBA93 /* surveyTask.swift in Sources */,
+				55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */,
 				5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */,
 				5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */,
 			);
