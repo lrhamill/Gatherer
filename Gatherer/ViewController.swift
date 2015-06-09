@@ -11,11 +11,12 @@ import ResearchKit
 
 extension ViewController : ORKTaskViewControllerDelegate {
     
-    
-    
-    
-    
-    
+    @IBAction func surveyTapped(sender : AnyObject) {
+        let taskViewController = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
+        taskViewController.delegate = self
+        presentViewController(taskViewController, animated: true, completion: nil)
+    }
+
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         //Handle results with taskViewController.result
         taskViewController.dismissViewControllerAnimated(true, completion: nil)

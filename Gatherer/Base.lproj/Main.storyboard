@@ -25,6 +25,16 @@
                                     <action selector="consentTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mx8-Rp-RX0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-A2-vi8">
+                                <rect key="frame" x="282" y="247" width="48" height="30"/>
+                                <state key="normal" title="Survey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="consentTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Muc-2H-sBE"/>
+                                    <action selector="surveyTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Li-ah-bsv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
