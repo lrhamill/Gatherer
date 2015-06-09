@@ -82,15 +82,6 @@ public var SurveyTask: ORKOrderedTask {
     steps += [summaryStep]
     
     
-    //TODO: add instructions step
-    
-    //TODO: add name question
-    
-    //TODO: add 'what is your quest' question
-    
-    //TODO: add color question step
-    
-    //TODO: add summary step
     
     return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
 }
