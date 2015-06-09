@@ -13,6 +13,11 @@
 		5596C11A1B206A4E0032B08F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5596C1191B206A4E0032B08F /* Images.xcassets */; };
 		5596C11D1B206A4E0032B08F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5596C11B1B206A4E0032B08F /* LaunchScreen.xib */; };
 		5596C1291B206A4E0032B08F /* GathererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C1281B206A4E0032B08F /* GathererTests.swift */; };
+		5596C1461B206C080032B08F /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5596C1391B206A8E0032B08F /* ResearchKit.framework */; };
+		5596C1471B206C080032B08F /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5596C1391B206A8E0032B08F /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14C1B206E6C0032B08F /* ConsentDocument.swift */; };
+		5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14E1B2075410032B08F /* ConsentTask.swift */; };
+		55B014491B26D58B00CEBA93 /* surveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B014481B26D58B00CEBA93 /* surveyTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +28,42 @@
 			remoteGlobalIDString = 5596C10C1B206A4E0032B08F;
 			remoteInfo = Gatherer;
 		};
+		5596C1381B206A8E0032B08F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		5596C13A1B206A8E0032B08F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		5596C1481B206C080032B08F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5596C14A1B206C080032B08F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5596C1471B206C080032B08F /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5596C10D1B206A4E0032B08F /* Gatherer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gatherer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +76,11 @@
 		5596C1221B206A4E0032B08F /* GathererTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GathererTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5596C1271B206A4E0032B08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5596C1281B206A4E0032B08F /* GathererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GathererTests.swift; sourceTree = "<group>"; };
+		5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gatherer-Bridging-Header.h"; sourceTree = "<group>"; };
+		5596C14C1B206E6C0032B08F /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		5596C14E1B2075410032B08F /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		55B014481B26D58B00CEBA93 /* surveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surveyTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5596C1461B206C080032B08F /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +105,7 @@
 		5596C1041B206A4E0032B08F = {
 			isa = PBXGroup;
 			children = (
+				5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */,
 				5596C10F1B206A4E0032B08F /* Gatherer */,
 				5596C1251B206A4E0032B08F /* GathererTests */,
 				5596C10E1B206A4E0032B08F /* Products */,
@@ -77,8 +124,12 @@
 		5596C10F1B206A4E0032B08F /* Gatherer */ = {
 			isa = PBXGroup;
 			children = (
+				5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */,
 				5596C1121B206A4E0032B08F /* AppDelegate.swift */,
 				5596C1141B206A4E0032B08F /* ViewController.swift */,
+				5596C14C1B206E6C0032B08F /* ConsentDocument.swift */,
+				55B014481B26D58B00CEBA93 /* surveyTask.swift */,
+				5596C14E1B2075410032B08F /* ConsentTask.swift */,
 				5596C1161B206A4E0032B08F /* Main.storyboard */,
 				5596C1191B206A4E0032B08F /* Images.xcassets */,
 				5596C11B1B206A4E0032B08F /* LaunchScreen.xib */,
@@ -112,6 +163,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5596C1331B206A8E0032B08F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5596C1391B206A8E0032B08F /* ResearchKit.framework */,
+				5596C13B1B206A8E0032B08F /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +182,12 @@
 				5596C1091B206A4E0032B08F /* Sources */,
 				5596C10A1B206A4E0032B08F /* Frameworks */,
 				5596C10B1B206A4E0032B08F /* Resources */,
+				5596C14A1B206C080032B08F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5596C1491B206C080032B08F /* PBXTargetDependency */,
 			);
 			name = Gatherer;
 			productName = Gatherer;
@@ -179,6 +241,12 @@
 			mainGroup = 5596C1041B206A4E0032B08F;
 			productRefGroup = 5596C10E1B206A4E0032B08F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5596C1331B206A8E0032B08F /* Products */;
+					ProjectRef = 5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5596C10C1B206A4E0032B08F /* Gatherer */,
@@ -186,6 +254,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5596C1391B206A8E0032B08F /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = 5596C1381B206A8E0032B08F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5596C13B1B206A8E0032B08F /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = 5596C13A1B206A8E0032B08F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5596C10B1B206A4E0032B08F /* Resources */ = {
@@ -213,6 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5596C1151B206A4E0032B08F /* ViewController.swift in Sources */,
+				5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */,
+				55B014491B26D58B00CEBA93 /* surveyTask.swift in Sources */,
+				5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */,
 				5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +320,11 @@
 			isa = PBXTargetDependency;
 			target = 5596C10C1B206A4E0032B08F /* Gatherer */;
 			targetProxy = 5596C1231B206A4E0032B08F /* PBXContainerItemProxy */;
+		};
+		5596C1491B206C080032B08F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = 5596C1481B206C080032B08F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -343,6 +436,7 @@
 				INFOPLIST_FILE = Gatherer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gatherer-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -353,6 +447,7 @@
 				INFOPLIST_FILE = Gatherer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gatherer-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +504,7 @@
 				5596C12E1B206A4E0032B08F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5596C12F1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "GathererTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +513,7 @@
 				5596C1311B206A4E0032B08F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
