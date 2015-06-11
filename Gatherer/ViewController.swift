@@ -15,24 +15,65 @@ extension ViewController : ORKTaskViewControllerDelegate {
     
 
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
+        
         //Handle results with taskViewController.result
+        
         println("Test: \(taskViewController.result)")
-        if let resultArray = taskViewController.result.results {
+        
+        switch reason {
+        
+        case .Completed:
             
-            var thisResult = 0
-            for item in resultArray {
-                let results = item.results as! [ORKChoiceQuestionResult]
+            if let resultArray = taskViewController.result.results {
                 
-                if results.count > 0 {
-                    if let answer = results[0].choiceAnswers as? [Int] {
-                        thisResult += answer[0]
+                var thisResult = 0
+                for item in resultArray {
+                    let results = item.results as! [ORKChoiceQuestionResult]
+                    
+                    if results.count > 0 {
+                        if let answer = results[0].choiceAnswers as? [Int] {
+                            thisResult += answer[0]
+                        }
                     }
                 }
+                
+                let newItem = NSEntityDescription.insertNewObjectForEntityForName("Result", inManagedObjectContext: self.context!) as! Result
+                newItem.date = NSDate()
+                newItem.surveyResult = thisResult
+                
+                println("\(newItem.date): \(newItem.surveyResult)")
+                
             }
+
             
-            println(thisResult - 20)
+        default:
+            // Exit without saving
+            
+            taskViewController.dismissViewControllerAnimated(true, completion: nil)
+            return
             
         }
+            if let resultArray = taskViewController.result.results {
+                
+                var thisResult = 0
+                for item in resultArray {
+                    let results = item.results as! [ORKChoiceQuestionResult]
+                    
+                    if results.count > 0 {
+                        if let answer = results[0].choiceAnswers as? [Int] {
+                            thisResult += answer[0]
+                        }
+                    }
+                }
+                
+                let newItem = NSEntityDescription.insertNewObjectForEntityForName("Result", inManagedObjectContext: self.context!) as! Result
+                newItem.date = NSDate()
+                newItem.surveyResult = thisResult
+                
+                println("\(newItem.date): \(newItem.surveyResult)")
+                
+            }
+        
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
