@@ -62,6 +62,12 @@ public var SurveyTask: ORKOrderedTask {
         
     ]
     
+    // Set questions to be non-optional
+    
+    for item in weeklyQuestions {
+        item.optional = false
+    }
+    
     // Add questions to survey in a randomised order
     
     var indexArray = [Int]()
