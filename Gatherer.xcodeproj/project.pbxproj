@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5536873C1B2859D100D15932 /* SavedSurveys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5536873A1B2859D100D15932 /* SavedSurveys.xcdatamodeld */; };
 		5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C1121B206A4E0032B08F /* AppDelegate.swift */; };
 		5596C1151B206A4E0032B08F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C1141B206A4E0032B08F /* ViewController.swift */; };
 		5596C1181B206A4E0032B08F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5596C1161B206A4E0032B08F /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		5596C1471B206C080032B08F /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5596C1391B206A8E0032B08F /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14C1B206E6C0032B08F /* ConsentDocument.swift */; };
 		5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14E1B2075410032B08F /* ConsentTask.swift */; };
-
 		55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0144A1B26D60300CEBA93 /* SurveyTask.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5536873B1B2859D100D15932 /* SavedSurveys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedSurveys.xcdatamodel; sourceTree = "<group>"; };
 		5596C10D1B206A4E0032B08F /* Gatherer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gatherer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5596C1111B206A4E0032B08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5596C1121B206A4E0032B08F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 				55B0144A1B26D60300CEBA93 /* SurveyTask.swift */,
 				5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */,
 				5596C1121B206A4E0032B08F /* AppDelegate.swift */,
+				5536873A1B2859D100D15932 /* SavedSurveys.xcdatamodeld */,
 				5596C1141B206A4E0032B08F /* ViewController.swift */,
 				5596C14C1B206E6C0032B08F /* ConsentDocument.swift */,
 				5596C14E1B2075410032B08F /* ConsentTask.swift */,
@@ -303,6 +305,7 @@
 				55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */,
 				5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */,
 				5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */,
+				5536873C1B2859D100D15932 /* SavedSurveys.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +520,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5536873A1B2859D100D15932 /* SavedSurveys.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5536873B1B2859D100D15932 /* SavedSurveys.xcdatamodel */,
+			);
+			currentVersion = 5536873B1B2859D100D15932 /* SavedSurveys.xcdatamodel */;
+			path = SavedSurveys.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5596C1051B206A4E0032B08F /* Project object */;
 }

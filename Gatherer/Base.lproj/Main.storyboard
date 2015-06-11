@@ -16,8 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOg-Gj-N76">
-                                <rect key="frame" x="277" y="285" width="58" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-A2-vi8">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <state key="normal" title="Survey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="surveyTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kRd-wK-aVR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOg-Gj-N76">
+                                <rect key="frame" x="271" y="247" width="58" height="30"/>
                                 <state key="normal" title="Consent">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,26 +34,21 @@
                                     <action selector="consentTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mx8-Rp-RX0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-A2-vi8">
-                                <rect key="frame" x="282" y="247" width="48" height="30"/>
-                                <state key="normal" title="Survey">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="consentTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Muc-2H-sBE"/>
-                                    <action selector="surveyTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Li-ah-bsv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zOg-Gj-N76" secondAttribute="centerX" id="3Tr-Xf-6pt"/>
-                            <constraint firstAttribute="centerY" secondItem="zOg-Gj-N76" secondAttribute="centerY" id="9Ud-l1-H59"/>
+                            <constraint firstAttribute="centerX" secondItem="zOg-Gj-N76" secondAttribute="centerX" id="4ev-kM-EwR"/>
+                            <constraint firstAttribute="centerY" secondItem="yeV-A2-vi8" secondAttribute="centerY" id="Bha-SI-pie"/>
+                            <constraint firstAttribute="centerX" secondItem="yeV-A2-vi8" secondAttribute="centerX" id="LKy-Yk-oSA"/>
+                            <constraint firstItem="yeV-A2-vi8" firstAttribute="top" secondItem="zOg-Gj-N76" secondAttribute="bottom" constant="8" id="NGV-Jl-lQO"/>
+                            <constraint firstAttribute="centerX" secondItem="zOg-Gj-N76" secondAttribute="centerX" id="cNc-WE-Dgg"/>
+                            <constraint firstAttribute="centerX" secondItem="yeV-A2-vi8" secondAttribute="centerX" id="y5y-tT-8KH"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="216" y="369"/>
         </scene>
     </scenes>
 </document>

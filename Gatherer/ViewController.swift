@@ -11,14 +11,12 @@ import ResearchKit
 
 extension ViewController : ORKTaskViewControllerDelegate {
     
-    @IBAction func surveyTapped(sender : AnyObject) {
-        let taskViewController = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
-        taskViewController.delegate = self
-        presentViewController(taskViewController, animated: true, completion: nil)
-    }
+    
 
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         //Handle results with taskViewController.result
+        println(taskViewController.result)
+        taskViewController.result
         taskViewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -26,11 +24,22 @@ extension ViewController : ORKTaskViewControllerDelegate {
 
 class ViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     
+    
+    @IBAction func surveyTapped(sender : AnyObject) {
+        let taskViewController = ORKTaskViewController(task: SurveyTask, taskRunUUID: nil)
+        taskViewController.delegate = self
+        presentViewController(taskViewController, animated: true, completion: nil)
+    }
 
     @IBAction func consentTapped(sender : AnyObject) {
-        let taskViewController = ORKTaskViewController(task: ConsentTask, taskRunUUID: nil)
+        var userConsent = ConsentTask
+        let taskViewController = ORKTaskViewController(task: userConsent, taskRunUUID: nil)
         taskViewController.delegate = self
         presentViewController(taskViewController, animated: true, completion: nil)
     }
