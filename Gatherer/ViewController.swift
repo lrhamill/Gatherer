@@ -24,8 +24,12 @@ extension ViewController : ORKTaskViewControllerDelegate {
 
 class ViewController: UIViewController {
     
+    let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
     
