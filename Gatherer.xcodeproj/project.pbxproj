@@ -19,6 +19,8 @@
 		5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14C1B206E6C0032B08F /* ConsentDocument.swift */; };
 		5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14E1B2075410032B08F /* ConsentTask.swift */; };
 		559E17FE1B29DE2E008E7A53 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E17FD1B29DE2E008E7A53 /* Result.swift */; };
+		559E18021B2AEF29008E7A53 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559E18011B2AEF29008E7A53 /* HealthKit.framework */; };
+		559E18051B2B21E6008E7A53 /* ConsentStatus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559E18041B2B21E6008E7A53 /* ConsentStatus.plist */; };
 		55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0144A1B26D60300CEBA93 /* SurveyTask.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,9 @@
 		5596C14C1B206E6C0032B08F /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		5596C14E1B2075410032B08F /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		559E17FD1B29DE2E008E7A53 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		559E18011B2AEF29008E7A53 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		559E18031B2AEF29008E7A53 /* Gatherer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gatherer.entitlements; sourceTree = "<group>"; };
+		559E18041B2B21E6008E7A53 /* ConsentStatus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConsentStatus.plist; sourceTree = "<group>"; };
 		55B0144A1B26D60300CEBA93 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5596C1461B206C080032B08F /* ResearchKit.framework in Frameworks */,
+				559E18021B2AEF29008E7A53 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,7 @@
 		5596C1041B206A4E0032B08F = {
 			isa = PBXGroup;
 			children = (
+				559E18011B2AEF29008E7A53 /* HealthKit.framework */,
 				5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */,
 				5596C10F1B206A4E0032B08F /* Gatherer */,
 				5596C1251B206A4E0032B08F /* GathererTests */,
@@ -128,6 +135,7 @@
 		5596C10F1B206A4E0032B08F /* Gatherer */ = {
 			isa = PBXGroup;
 			children = (
+				559E18031B2AEF29008E7A53 /* Gatherer.entitlements */,
 				55B0144A1B26D60300CEBA93 /* SurveyTask.swift */,
 				5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */,
 				5596C1121B206A4E0032B08F /* AppDelegate.swift */,
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				5596C1111B206A4E0032B08F /* Info.plist */,
+				559E18041B2B21E6008E7A53 /* ConsentStatus.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +238,12 @@
 				TargetAttributes = {
 					5596C10C1B206A4E0032B08F = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 3K29TKR48J;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					5596C1211B206A4E0032B08F = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -285,6 +300,7 @@
 			files = (
 				5596C1181B206A4E0032B08F /* Main.storyboard in Resources */,
 				5596C11D1B206A4E0032B08F /* LaunchScreen.xib in Resources */,
+				559E18051B2B21E6008E7A53 /* ConsentStatus.plist in Resources */,
 				5596C11A1B206A4E0032B08F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gatherer/Gatherer.entitlements;
 				INFOPLIST_FILE = Gatherer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gatherer/Gatherer.entitlements;
 				INFOPLIST_FILE = Gatherer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

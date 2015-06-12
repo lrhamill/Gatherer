@@ -26,12 +26,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOg-Gj-N76">
-                                <rect key="frame" x="271" y="247" width="58" height="30"/>
-                                <state key="normal" title="Consent">
+                                <rect key="frame" x="237" y="247" width="127" height="30"/>
+                                <state key="normal" title="Withdraw Consent">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="consentTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mx8-Rp-RX0"/>
+                                    <action selector="withdrawTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ipc-Ms-7ki"/>
                                 </connections>
                             </button>
                         </subviews>
