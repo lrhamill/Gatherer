@@ -13,7 +13,6 @@ import CoreData
 
 extension ViewController : ORKTaskViewControllerDelegate {
 
-    
 
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
         
@@ -25,12 +24,43 @@ extension ViewController : ORKTaskViewControllerDelegate {
         case .Completed:
             
             
-            // If the user has come from the consent form, update consent info and exit
+            // If the user has come from the consent form, update consent info & HK authentication
             if !consented {
                 consented = true
-                taskViewController.dismissViewControllerAnimated(true, completion: nil)
-                return
+                
+                // Request HK authentication
+                
+                while true {
+                
+                    let authStatus = manager.store.authorizationStatusForType(HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning))
+                    
+                    switch authStatus {
+                    case .SharingAuthorized:
+                        
+                        taskViewController.dismissViewControllerAnimated(true, completion: nil)
+                        return
+                        
+                    default:
+                        manager.authoriseHK { (authorized,  error) -> Void in
+                            if authorized {
+                                println("HealthKit authorization received.")
+                            }
+                            else
+                            {
+                                println("HealthKit authorization denied!")
+                                var HKwarning = UIAlertController(title: "HealthKit Authorisation", message: "You must authorise HealthKit to continue.", preferredStyle: UIAlertControllerStyle.Alert)
+                                
+                                HKwarning.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+                                
+                                self.presentViewController(HKwarning, animated: true, completion: nil)
+                                }
+                        }
+                    }
+                }
+                    
             }
+
+            
         
             // Otherwise, if the user has come from the survey task,
             // save the results using Core Data
@@ -71,6 +101,8 @@ extension ViewController : ORKTaskViewControllerDelegate {
 }
 
 class ViewController: UIViewController {
+    
+    let manager = HealthManager()
     
     var consented = false {
         didSet {
@@ -118,10 +150,13 @@ class ViewController: UIViewController {
         }
         
         if !consented {
+            
             println(consented)
             launchConsent()
             
         }
+        
+        
         
         // Create a new fetch request
         let fetchRequest = NSFetchRequest(entityName: "Result")

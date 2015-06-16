@@ -21,6 +21,7 @@
 		559E17FE1B29DE2E008E7A53 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E17FD1B29DE2E008E7A53 /* Result.swift */; };
 		559E18021B2AEF29008E7A53 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559E18011B2AEF29008E7A53 /* HealthKit.framework */; };
 		559E18051B2B21E6008E7A53 /* ConsentStatus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559E18041B2B21E6008E7A53 /* ConsentStatus.plist */; };
+		559E18071B305E31008E7A53 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E18061B305E31008E7A53 /* HealthManager.swift */; };
 		55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0144A1B26D60300CEBA93 /* SurveyTask.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		559E18011B2AEF29008E7A53 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		559E18031B2AEF29008E7A53 /* Gatherer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gatherer.entitlements; sourceTree = "<group>"; };
 		559E18041B2B21E6008E7A53 /* ConsentStatus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConsentStatus.plist; sourceTree = "<group>"; };
+		559E18061B305E31008E7A53 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		55B0144A1B26D60300CEBA93 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				5596C1141B206A4E0032B08F /* ViewController.swift */,
 				5596C14C1B206E6C0032B08F /* ConsentDocument.swift */,
 				5596C14E1B2075410032B08F /* ConsentTask.swift */,
+				559E18061B305E31008E7A53 /* HealthManager.swift */,
 				5596C1161B206A4E0032B08F /* Main.storyboard */,
 				5596C1191B206A4E0032B08F /* Images.xcassets */,
 				5596C11B1B206A4E0032B08F /* LaunchScreen.xib */,
@@ -326,6 +329,7 @@
 				559E17FE1B29DE2E008E7A53 /* Result.swift in Sources */,
 				5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */,
 				5536873C1B2859D100D15932 /* SavedSurveys.xcdatamodeld in Sources */,
+				559E18071B305E31008E7A53 /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
