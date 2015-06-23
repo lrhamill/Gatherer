@@ -92,7 +92,6 @@
 		559E18041B2B21E6008E7A53 /* ConsentStatus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConsentStatus.plist; sourceTree = "<group>"; };
 		559E18061B305E31008E7A53 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		55B0144A1B26D60300CEBA93 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
-		55C3BF481B332D2F005C56E6 /* c1031996_MSc_Project.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = c1031996_MSc_Project.mobileprovision; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +117,6 @@
 		5596C1041B206A4E0032B08F = {
 			isa = PBXGroup;
 			children = (
-				55C3BF481B332D2F005C56E6 /* c1031996_MSc_Project.mobileprovision */,
 				559E18011B2AEF29008E7A53 /* HealthKit.framework */,
 				5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */,
 				5596C10F1B206A4E0032B08F /* Gatherer */,
