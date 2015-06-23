@@ -72,14 +72,14 @@
 
 /* Begin PBXFileReference section */
 		5536873B1B2859D100D15932 /* SavedSurveys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedSurveys.xcdatamodel; sourceTree = "<group>"; };
-		5596C10D1B206A4E0032B08F /* Gatherer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gatherer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5596C10D1B206A4E0032B08F /* c1031996.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = c1031996.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5596C1111B206A4E0032B08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5596C1121B206A4E0032B08F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5596C1141B206A4E0032B08F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5596C1171B206A4E0032B08F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5596C1191B206A4E0032B08F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5596C11C1B206A4E0032B08F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5596C1221B206A4E0032B08F /* GathererTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GathererTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5596C1221B206A4E0032B08F /* c1031996Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = c1031996Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5596C1271B206A4E0032B08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5596C1281B206A4E0032B08F /* GathererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GathererTests.swift; sourceTree = "<group>"; };
 		5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 		559E18041B2B21E6008E7A53 /* ConsentStatus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConsentStatus.plist; sourceTree = "<group>"; };
 		559E18061B305E31008E7A53 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		55B0144A1B26D60300CEBA93 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		55C3BF481B332D2F005C56E6 /* c1031996_MSc_Project.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = c1031996_MSc_Project.mobileprovision; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		5596C1041B206A4E0032B08F = {
 			isa = PBXGroup;
 			children = (
+				55C3BF481B332D2F005C56E6 /* c1031996_MSc_Project.mobileprovision */,
 				559E18011B2AEF29008E7A53 /* HealthKit.framework */,
 				5596C1321B206A8E0032B08F /* ResearchKit.xcodeproj */,
 				5596C10F1B206A4E0032B08F /* Gatherer */,
@@ -128,8 +130,8 @@
 		5596C10E1B206A4E0032B08F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5596C10D1B206A4E0032B08F /* Gatherer.app */,
-				5596C1221B206A4E0032B08F /* GathererTests.xctest */,
+				5596C10D1B206A4E0032B08F /* c1031996.app */,
+				5596C1221B206A4E0032B08F /* c1031996Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5596C10C1B206A4E0032B08F /* Gatherer */ = {
+		5596C10C1B206A4E0032B08F /* c1031996 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5596C12C1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "Gatherer" */;
+			buildConfigurationList = 5596C12C1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "c1031996" */;
 			buildPhases = (
 				5596C1091B206A4E0032B08F /* Sources */,
 				5596C10A1B206A4E0032B08F /* Frameworks */,
@@ -207,14 +209,14 @@
 			dependencies = (
 				5596C1491B206C080032B08F /* PBXTargetDependency */,
 			);
-			name = Gatherer;
+			name = c1031996;
 			productName = Gatherer;
-			productReference = 5596C10D1B206A4E0032B08F /* Gatherer.app */;
+			productReference = 5596C10D1B206A4E0032B08F /* c1031996.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5596C1211B206A4E0032B08F /* GathererTests */ = {
+		5596C1211B206A4E0032B08F /* c1031996Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5596C12F1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "GathererTests" */;
+			buildConfigurationList = 5596C12F1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "c1031996Tests" */;
 			buildPhases = (
 				5596C11E1B206A4E0032B08F /* Sources */,
 				5596C11F1B206A4E0032B08F /* Frameworks */,
@@ -225,9 +227,9 @@
 			dependencies = (
 				5596C1241B206A4E0032B08F /* PBXTargetDependency */,
 			);
-			name = GathererTests;
+			name = c1031996Tests;
 			productName = GathererTests;
-			productReference = 5596C1221B206A4E0032B08F /* GathererTests.xctest */;
+			productReference = 5596C1221B206A4E0032B08F /* c1031996Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5596C1081B206A4E0032B08F /* Build configuration list for PBXProject "Gatherer" */;
+			buildConfigurationList = 5596C1081B206A4E0032B08F /* Build configuration list for PBXProject "c1031996" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,8 +275,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				5596C10C1B206A4E0032B08F /* Gatherer */,
-				5596C1211B206A4E0032B08F /* GathererTests */,
+				5596C10C1B206A4E0032B08F /* c1031996 */,
+				5596C1211B206A4E0032B08F /* c1031996Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -346,7 +348,7 @@
 /* Begin PBXTargetDependency section */
 		5596C1241B206A4E0032B08F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5596C10C1B206A4E0032B08F /* Gatherer */;
+			target = 5596C10C1B206A4E0032B08F /* c1031996 */;
 			targetProxy = 5596C1231B206A4E0032B08F /* PBXContainerItemProxy */;
 		};
 		5596C1491B206C080032B08F /* PBXTargetDependency */ = {
@@ -462,9 +464,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Gatherer/Gatherer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gatherer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = c1031996;
 				SWIFT_OBJC_BRIDGING_HEADER = "Gatherer-Bridging-Header.h";
 			};
 			name = Debug;
@@ -474,9 +477,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Gatherer/Gatherer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Gatherer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = c1031996;
 				SWIFT_OBJC_BRIDGING_HEADER = "Gatherer-Bridging-Header.h";
 			};
 			name = Release;
@@ -495,8 +499,8 @@
 				);
 				INFOPLIST_FILE = GathererTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gatherer.app/Gatherer";
+				PRODUCT_NAME = c1031996Tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/c1031996.app/c1031996";
 			};
 			name = Debug;
 		};
@@ -510,15 +514,15 @@
 				);
 				INFOPLIST_FILE = GathererTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gatherer.app/Gatherer";
+				PRODUCT_NAME = c1031996Tests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/c1031996.app/c1031996";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5596C1081B206A4E0032B08F /* Build configuration list for PBXProject "Gatherer" */ = {
+		5596C1081B206A4E0032B08F /* Build configuration list for PBXProject "c1031996" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5596C12A1B206A4E0032B08F /* Debug */,
@@ -527,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5596C12C1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "Gatherer" */ = {
+		5596C12C1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "c1031996" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5596C12D1B206A4E0032B08F /* Debug */,
@@ -536,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5596C12F1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "GathererTests" */ = {
+		5596C12F1B206A4E0032B08F /* Build configuration list for PBXNativeTarget "c1031996Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5596C1301B206A4E0032B08F /* Debug */,

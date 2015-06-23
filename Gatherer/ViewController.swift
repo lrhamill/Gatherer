@@ -28,36 +28,9 @@ extension ViewController : ORKTaskViewControllerDelegate {
             if !consented {
                 consented = true
                 
-                // Request HK authentication
-                
-                while true {
-                
-                    let authStatus = manager.store.authorizationStatusForType(HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning))
-                    
-                    switch authStatus {
-                    case .SharingAuthorized:
-                        
-                        taskViewController.dismissViewControllerAnimated(true, completion: nil)
-                        return
-                        
-                    default:
-                        manager.authoriseHK { (authorized,  error) -> Void in
-                            if authorized {
-                                println("HealthKit authorization received.")
-                            }
-                            else
-                            {
-                                println("HealthKit authorization denied!")
-                                var HKwarning = UIAlertController(title: "HealthKit Authorisation", message: "You must authorise HealthKit to continue.", preferredStyle: UIAlertControllerStyle.Alert)
-                                
-                                HKwarning.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-                                
-                                self.presentViewController(HKwarning, animated: true, completion: nil)
-                                }
-                        }
-                    }
-                }
-                    
+                taskViewController.dismissViewControllerAnimated(true, completion: authHealthkit)
+                return
+
             }
 
             
@@ -102,7 +75,9 @@ extension ViewController : ORKTaskViewControllerDelegate {
 
 class ViewController: UIViewController {
     
-    let manager = HealthManager()
+    @IBOutlet weak var HKCheck: UILabel!
+    
+    var manager = HealthManager()
     
     var consented = false {
         didSet {
@@ -118,6 +93,7 @@ class ViewController: UIViewController {
                         newDict["Consented"] = consented
                         
                         ([newDict] as NSArray).writeToFile(path, atomically: false)
+                        println("Saved successfully.")
                     
                     
                 }
@@ -128,8 +104,50 @@ class ViewController: UIViewController {
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     
+    func authHealthkit() {
+        
+        let authStatus = manager.store.authorizationStatusForType(HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning))
+        
+        switch authStatus {
+        case .SharingAuthorized:
+            HKCheck.text = "Welcome. When you are ready, tap on the survey button."
+            return
+            
+        case .NotDetermined:
+            println("Not determined")
+            
+            println("Trying to authorise...")
+            manager.authoriseHK { (success,  error) -> Void in
+                
+                if success {
+                    self.HKCheck.text = "Welcome. When you are ready, tap on the survey button."
+                    return
+                }
+                else {
+                    println("HealthKit authorization denied!")
+                        var HKwarning = UIAlertController(title: "HealthKit Authorisation", message: "You must authorise HealthKit to continue.", preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        HKwarning.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+                        
+                        self.presentViewController(HKwarning, animated: true, completion: nil)
+                        self.HKCheck.text = "You must authorize HealthKit before you can take a survey."
+                
+                }
+            }
+            
+        case .SharingDenied:
+            println("Denied")
+            self.HKCheck.text = "You must authorize HealthKit before you can take a survey."
+            return
+            
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        HKCheck.lineBreakMode = .ByWordWrapping
+        HKCheck.numberOfLines = 0
         
         
         

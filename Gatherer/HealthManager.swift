@@ -11,12 +11,15 @@ import HealthKit
 
 class HealthManager {
     
-    let store: HKHealthStore = HKHealthStore()
+    var store = HKHealthStore()
+    let emptyWriteTypes = Set<NSObject>()
+    let distanceReadType = Set(arrayLiteral: HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)!)
 
     func authoriseHK(completion: ((success:Bool, error:NSError!) -> Void)!) {
-        
 
         if !HKHealthStore.isHealthDataAvailable() {
+            
+            println("No health data is available")
             
             let error = NSError(domain: "com.lrhamill.gatherer", code: 2, userInfo: [NSLocalizedDescriptionKey:"HealthKit is not available in this Device"])
             
@@ -27,15 +30,14 @@ class HealthManager {
             return;
             
         }
-        
-        store.requestAuthorizationToShareTypes(nil, readTypes: Set(arrayLiteral: [HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)])) { (success, error) -> Void in
+    
+        store.requestAuthorizationToShareTypes(emptyWriteTypes, readTypes: distanceReadType) { ( success, error ) -> Void in
             
-            if( completion != nil )
-            {
+            if completion != nil {
                 completion(success:success,error:error)
             }
-        }
         
+        }
 
     }
 }

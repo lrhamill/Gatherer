@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5596C10C1B206A4E0032B08F"
-               BuildableName = "Gatherer.app"
-               BlueprintName = "Gatherer"
-               ReferencedContainer = "container:Gatherer.xcodeproj">
+               BuildableName = "c1031996.app"
+               BlueprintName = "c1031996"
+               ReferencedContainer = "container:c1031996.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5596C1211B206A4E0032B08F"
-               BuildableName = "GathererTests.xctest"
-               BlueprintName = "GathererTests"
-               ReferencedContainer = "container:Gatherer.xcodeproj">
+               BuildableName = "c1031996Tests.xctest"
+               BlueprintName = "c1031996Tests"
+               ReferencedContainer = "container:c1031996.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5596C1211B206A4E0032B08F"
-               BuildableName = "GathererTests.xctest"
-               BlueprintName = "GathererTests"
-               ReferencedContainer = "container:Gatherer.xcodeproj">
+               BuildableName = "c1031996Tests.xctest"
+               BlueprintName = "c1031996Tests"
+               ReferencedContainer = "container:c1031996.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5596C10C1B206A4E0032B08F"
-            BuildableName = "Gatherer.app"
-            BlueprintName = "Gatherer"
-            ReferencedContainer = "container:Gatherer.xcodeproj">
+            BuildableName = "c1031996.app"
+            BlueprintName = "c1031996"
+            ReferencedContainer = "container:c1031996.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5596C10C1B206A4E0032B08F"
-            BuildableName = "Gatherer.app"
-            BlueprintName = "Gatherer"
-            ReferencedContainer = "container:Gatherer.xcodeproj">
+            BuildableName = "c1031996.app"
+            BlueprintName = "c1031996"
+            ReferencedContainer = "container:c1031996.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5596C10C1B206A4E0032B08F"
-            BuildableName = "Gatherer.app"
-            BlueprintName = "Gatherer"
-            ReferencedContainer = "container:Gatherer.xcodeproj">
+            BuildableName = "c1031996.app"
+            BlueprintName = "c1031996"
+            ReferencedContainer = "container:c1031996.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
