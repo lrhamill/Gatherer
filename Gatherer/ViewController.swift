@@ -25,8 +25,10 @@ extension ViewController : ORKTaskViewControllerDelegate {
             
             
             // If the user has come from the consent form, update consent info & HK authentication
-            if !consented {
-                consented = true
+            if !self.consented {
+                println("User has exited consent form. Consented: \(consented)")
+                self.consented = true
+                println("User has exited consent form. Consented: \(consented)")
                 
                 taskViewController.dismissViewControllerAnimated(true, completion: authHealthkit)
                 return
@@ -51,13 +53,15 @@ extension ViewController : ORKTaskViewControllerDelegate {
                     }
                 }
                 
+                recentHappiness.text = String(thisResult)
+                
                 let newItem = NSEntityDescription.insertNewObjectForEntityForName("Result", inManagedObjectContext: self.context!) as! Result
                 newItem.date = NSDate()
                 newItem.surveyResult = thisResult
                 
                 println("\(newItem.date): \(newItem.surveyResult)")
                 taskViewController.dismissViewControllerAnimated(true, completion: nil)
-                
+                updateDistance()
             }
 
             
@@ -77,7 +81,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var HKCheck: UILabel!
     
+    @IBOutlet weak var recentDistance: UILabel!
+    
+    @IBOutlet weak var recentHappiness: UILabel!
+    
+    
     var manager = HealthManager()
+    
+    func updateDistance() {
+        manager.thisWeekSteps() {
+            query, results, error in
+            
+            if error != nil {
+                return
+            }
+            self.recentDistance.text = "\(Int(results.statistics()[0].sumQuantity().doubleValueForUnit(HKUnit.countUnit())))"
+            
+        }
+    }
     
     var consented = false {
         didSet {
@@ -86,18 +107,29 @@ class ViewController: UIViewController {
             
             // Save changes to consented status
             
-            if let path = NSBundle.mainBundle().pathForResource("ConsentStatus", ofType: "plist") {
-                    if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, Bool> {
-                        
-                        var newDict = dict
-                        newDict["Consented"] = consented
-                        
-                        ([newDict] as NSArray).writeToFile(path, atomically: false)
-                        println("Saved successfully.")
-                    
-                    
-                }
+            var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+            var path = paths.stringByAppendingPathComponent("ConsentStatus.plist")
+            var fileManager = NSFileManager.defaultManager()
+            if (!(fileManager.fileExistsAtPath(path))) {
+                var bundle : String = NSBundle.mainBundle().pathForResource("ConsentStatus", ofType: "plist")!
+                fileManager.copyItemAtPath(bundle, toPath: path, error:nil)
             }
+            var data : NSMutableDictionary = NSMutableDictionary(contentsOfFile: path)!
+            data.setObject(consented, forKey: "Consented")
+            data.writeToFile(path, atomically: true)
+            
+//            if let path = NSBundle.mainBundle().pathForResource("ConsentStatus", ofType: "plist") {
+//                    if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, Bool> {
+//                        
+//                        var newDict = dict
+//                        newDict["Consented"] = consented
+//                        
+//                        ([newDict] as NSArray).writeToFile(path, atomically: false)
+//                        println("Saved successfully.")
+//                    
+//                    
+//                }
+//            }
         }
     }
     
@@ -110,7 +142,6 @@ class ViewController: UIViewController {
         
         switch authStatus {
         case .SharingAuthorized:
-            HKCheck.text = "Welcome. When you are ready, tap on the survey button."
             return
             
         case .NotDetermined:
@@ -120,7 +151,6 @@ class ViewController: UIViewController {
             manager.authoriseHK { (success,  error) -> Void in
                 
                 if success {
-                    self.HKCheck.text = "Welcome. When you are ready, tap on the survey button."
                     return
                 }
                 else {
@@ -136,8 +166,7 @@ class ViewController: UIViewController {
             }
             
         case .SharingDenied:
-            println("Denied")
-            self.HKCheck.text = "You must authorize HealthKit before you can take a survey."
+            
             return
             
         }
@@ -145,27 +174,33 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         HKCheck.lineBreakMode = .ByWordWrapping
         HKCheck.numberOfLines = 0
         
-        
+        updateDistance()
         
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let path = NSBundle.mainBundle().pathForResource("ConsentStatus", ofType: "plist") {
-            if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
-                
-                let plist = dict["Consented"] as! Bool
-                println("plist says: \(plist)")
-                
-                consented = dict["Consented"] as! Bool
-                
-            }
-        }
+//        if let path = NSBundle.mainBundle().pathForResource("ConsentStatus", ofType: "plist") {
+//            if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, AnyObject> {
+//                
+//                let plist = dict["Consented"] as! Bool
+//                println("plist says: \(plist)")
+//                
+//                consented = dict["Consented"] as! Bool
+//                
+//            }
+//        }
+
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        var path = paths.stringByAppendingPathComponent("ConsentStatus.plist")
+        let save = NSDictionary(contentsOfFile: path)
         
         if !consented {
             

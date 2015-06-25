@@ -13,7 +13,7 @@ class HealthManager {
     
     var store = HKHealthStore()
     let emptyWriteTypes = Set<NSObject>()
-    let distanceReadType = Set(arrayLiteral: HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)!)
+    let stepReadType = Set(arrayLiteral: HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!)
 
     func authoriseHK(completion: ((success:Bool, error:NSError!) -> Void)!) {
 
@@ -31,7 +31,7 @@ class HealthManager {
             
         }
     
-        store.requestAuthorizationToShareTypes(emptyWriteTypes, readTypes: distanceReadType) { ( success, error ) -> Void in
+        store.requestAuthorizationToShareTypes(emptyWriteTypes, readTypes: stepReadType) { ( success, error ) -> Void in
             
             if completion != nil {
                 completion(success:success,error:error)
@@ -39,5 +39,30 @@ class HealthManager {
         
         }
 
+    }
+    
+    func thisWeekSteps(completion: ((HKStatisticsCollectionQuery!, HKStatisticsCollection!, NSError!) -> Void)!) {
+        
+        // Get dates for this week
+        let calendar = NSCalendar()
+        let today = NSDate()
+        let lastWeek = today.dateByAddingTimeInterval(-24 * 7 * 60 * 60)
+        let interval = NSDateComponents()
+        interval.day = 7
+        println(today)
+        println(lastWeek)
+        
+        // Sample type
+        let sampleType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+        
+        // Run query
+        let query = HKStatisticsCollectionQuery(quantityType: sampleType, quantitySamplePredicate: nil, options: .CumulativeSum, anchorDate: lastWeek, intervalComponents: interval)
+        
+        if completion != nil {
+            query.initialResultsHandler = completion
+        }
+        
+        store.executeQuery(query)
+        
     }
 }

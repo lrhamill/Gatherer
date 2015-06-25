@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5527FF7B1B3AB080002F5CF1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527FF7A1B3AB080002F5CF1 /* Result.swift */; };
 		5536873C1B2859D100D15932 /* SavedSurveys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5536873A1B2859D100D15932 /* SavedSurveys.xcdatamodeld */; };
 		5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C1121B206A4E0032B08F /* AppDelegate.swift */; };
 		5596C1151B206A4E0032B08F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C1141B206A4E0032B08F /* ViewController.swift */; };
@@ -18,7 +19,6 @@
 		5596C1471B206C080032B08F /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5596C1391B206A8E0032B08F /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14C1B206E6C0032B08F /* ConsentDocument.swift */; };
 		5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596C14E1B2075410032B08F /* ConsentTask.swift */; };
-		559E17FE1B29DE2E008E7A53 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E17FD1B29DE2E008E7A53 /* Result.swift */; };
 		559E18021B2AEF29008E7A53 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559E18011B2AEF29008E7A53 /* HealthKit.framework */; };
 		559E18051B2B21E6008E7A53 /* ConsentStatus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559E18041B2B21E6008E7A53 /* ConsentStatus.plist */; };
 		559E18071B305E31008E7A53 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E18061B305E31008E7A53 /* HealthManager.swift */; };
@@ -71,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5527FF7A1B3AB080002F5CF1 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = ../Result.swift; sourceTree = "<group>"; };
 		5536873B1B2859D100D15932 /* SavedSurveys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedSurveys.xcdatamodel; sourceTree = "<group>"; };
 		5596C10D1B206A4E0032B08F /* c1031996.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = c1031996.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5596C1111B206A4E0032B08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gatherer-Bridging-Header.h"; sourceTree = "<group>"; };
 		5596C14C1B206E6C0032B08F /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		5596C14E1B2075410032B08F /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
-		559E17FD1B29DE2E008E7A53 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		559E18011B2AEF29008E7A53 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		559E18031B2AEF29008E7A53 /* Gatherer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Gatherer.entitlements; sourceTree = "<group>"; };
 		559E18041B2B21E6008E7A53 /* ConsentStatus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConsentStatus.plist; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				5596C14B1B206D1A0032B08F /* Gatherer-Bridging-Header.h */,
 				5596C1121B206A4E0032B08F /* AppDelegate.swift */,
 				5536873A1B2859D100D15932 /* SavedSurveys.xcdatamodeld */,
-				559E17FD1B29DE2E008E7A53 /* Result.swift */,
+				5527FF7A1B3AB080002F5CF1 /* Result.swift */,
 				5596C1141B206A4E0032B08F /* ViewController.swift */,
 				5596C14C1B206E6C0032B08F /* ConsentDocument.swift */,
 				5596C14E1B2075410032B08F /* ConsentTask.swift */,
@@ -326,9 +326,9 @@
 				5596C14F1B2075410032B08F /* ConsentTask.swift in Sources */,
 				55B0144B1B26D60300CEBA93 /* SurveyTask.swift in Sources */,
 				5596C14D1B206E6C0032B08F /* ConsentDocument.swift in Sources */,
-				559E17FE1B29DE2E008E7A53 /* Result.swift in Sources */,
 				5596C1131B206A4E0032B08F /* AppDelegate.swift in Sources */,
 				5536873C1B2859D100D15932 /* SavedSurveys.xcdatamodeld in Sources */,
+				5527FF7B1B3AB080002F5CF1 /* Result.swift in Sources */,
 				559E18071B305E31008E7A53 /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
